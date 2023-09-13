@@ -19,8 +19,12 @@ export default function App() {
         onset={setp2}
         text="how was the service for your friend :"
       ></Tip>
-      <Disp bill={bill} percent={(((p1 + p2) / 2) * bill) / 100}></Disp>
-      <Reset onsetbill={setbill} onsetp1={setp1} onsetp2={setp2}></Reset>
+      {bill > 0 && (
+        <>
+          <Disp bill={bill} percent={(((p1 + p2) / 2) * bill) / 100}></Disp>
+          <Reset onsetbill={setbill} onsetp1={setp1} onsetp2={setp2}></Reset>
+        </>
+      )}
     </div>
   );
 }
