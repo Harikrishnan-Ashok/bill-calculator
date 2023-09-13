@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
-}
+/* styles.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Container for components */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the Bill component */
+.Bill {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Bill h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.Bill input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Style the Tip component */
+.Tip {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+}
+
+.Tip h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.Tip select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
 }
