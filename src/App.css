@@ -1,56 +1,98 @@
-/* styles.css */
+/* App.css */
 
-/* Container for components */
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Modal Styles */
 .container {
+  background: linear-gradient(to bottom, #04bbfc, #00f6fb);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  min-width: 75%; /* Set the max-width to 75% of the viewport width */
+  max-height: 75%; /* Set the max-height to 75% of the viewport height */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/* Style the Bill component */
-.Bill {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  width: 100%;
-  max-width: 400px; /* Adjust the maximum width as needed */
+/* Bill Component */
+.bill-container {
+  display: flex;
+  flex-direction: row; /* Arrange label and input in a row */
+  align-items: center; /* Vertically align the label and input */
+  margin-bottom: 20px;
+  text-align: left; /* Align the label text to the left */
+  width: 100%; /* Make the content inside bill-container full-width */
 }
 
-.Bill h2 {
-  font-size: 18px;
+label {
+  flex: 1; /* Allow the label to grow and occupy available space */
+  font-weight: bold;
+  font-size: 1rem; /* Reduce font size */
+  margin-right: 10px; /* Add a small gap between label and input */
+}
+
+input[type="text"] {
+  flex: 2; /* Allow the input to grow and occupy available space */
+  padding: 8px; /* Adjust padding for the text input */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Tip Component */
+.tip-container {
+  display: flex;
+  flex-direction: row; /* Arrange label and select in a row */
+  align-items: center; /* Vertically align the label and select */
+  margin-bottom: 20px;
+  text-align: left; /* Align the label text to the left */
+  width: 100%; /* Make the content inside tip-container full-width */
+}
+
+select {
+  flex: 2; /* Allow the select to grow and occupy available space */
+  padding: 8px; /* Adjust padding for the select input */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
   color: #333;
 }
 
-.Bill input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  outline: none;
+/* Disp Component */
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00cc99;
 }
 
-/* Style the Tip component */
-.Tip {
-  background-color: #e0e0e0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  width: 100%;
-  max-width: 400px; /* Adjust the maximum width as needed */
+/* Reset Component */
+button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.Tip h2 {
-  font-size: 18px;
-  color: #333;
-}
-
-.Tip select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  outline: none;
+button:hover {
+  background-color: #ff4d3b;
 }
